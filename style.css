@@ -2,6 +2,7 @@ body {
   background: #1b1b1b;
 }
 
+
 header {
   width: 95%;
   height: 10vh;
@@ -28,6 +29,7 @@ header {
   color: #f50057;
 }
 .pointer {cursor: pointer;}
+.grab {cursor: grab;}
 
 #on-off {
   cursor: pointer;
@@ -160,25 +162,28 @@ aside {
 /* NOTE: ------------------------- */
 .section-home {
   min-height: 100vh;
-  padding: 12rem;
   display: flex;
   align-items: center;
   padding-left: 1.5rem;
   color: white;
 }
+.text-zone{
+  position: relative;
+}
 
 .text-zone h1 {
-  line-height: 60px;
-  font-size: 3.2rem;
+  width: 100%;
+  line-height: 35px;
+  font-size: 2.8rem;
+  font-weight: 700;
 }
-}
+
 
 .text-zone h1::before {
   content: "<h1>";
   position: absolute;
-  left: -80px;
-  top: -10px;
-  font-size: 1.2rem;
+  top: -40px;
+  font-size: 1rem;
   font-family: "La Belle Aurore", cursive;
   letter-spacing: 1px;
   font-style: italic;
@@ -187,10 +192,9 @@ aside {
 
 .text-zone h1::after {
   content: "</h1>";
-  position: absolute;
-  bottom: -20px;
-  right: -80px;
-  font-size: 1.2rem;
+  position: relative;
+  right: px;
+  font-size: 1rem;
   font-family: "La Belle Aurore", cursive;
   letter-spacing: 1px;
   font-style: italic;
@@ -198,11 +202,11 @@ aside {
 }
 
 .text-zone img {
-  width: 180px;
+  width: 50px;
   height: auto;
   position: relative;
-  bottom: 40px;
-  left: 30px;
+  bottom: 0.8rem;
+  left: 5px;
 }
 
 .text-zone .gray-text {
@@ -295,9 +299,21 @@ aside {
   color: #1d1d1d;
 }
 
-.scroll-down {
+.scroll-down-left {
   position: absolute;
-  right: 20px;
+  right: 0;
+  bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(90deg);
+  display: block;
+  font-size: 14px
+}
+.scroll-down-right {
+  position: absolute;
+  left: 0;
   bottom: 3.5rem;
   display: flex;
   flex-direction: column;
@@ -308,12 +324,8 @@ aside {
   font-size: 14px
 }
 
-.scroll-down-left {
-  left: -30px;
-  right: auto;
-}
 
-.scroll-down span {
+.move span {
   display: inline-block;
   animation: scroll .5s linear infinite alternate-reverse;
 }
@@ -336,7 +348,7 @@ aside {
 
 
 .header h2 {
-  font-size: 5rem;
+  font-size: 45px;
   color: #08fdd8;
   margin-top: 30px;
 }
@@ -405,11 +417,11 @@ aside {
 }
 
 .fake-big-2 {
-  font-size: 12rem;
+  font-size: 10rem;
   font-weight: 700;
   position: absolute;
   color: #2d2d2e;
-  left: 10px;
+  left: -10px;
   bottom: -70px;
   letter-spacing: -10px;
   z-index: -999;
@@ -495,7 +507,10 @@ aside {
 
 .tech {
   text-decoration: none;
-  color: #08fdd8;
+  color: #f50057;
+  font-weight: bolder;
+
+
 }
 
 /* NOTE: blog section starts here @@@@@@@@@@@@@@@@@@@@@@@@@@@ */
@@ -506,10 +521,10 @@ aside {
 }
 
 .section-blog .fake-big-2 {
-  font-size: 12rem;
+  font-size: 10rem;
   font-weight: bolder;
   position: absolute;
-  top: -240px;
+  top: -220px;
   left: 0;
 }
 
@@ -555,6 +570,11 @@ aside {
   flex-direction: row;
   justify-content: space-between;
   position: relative;
+}
+#section-contact .fake-big-2{
+  position: absolute;
+  bottom: 100px;
+  left: 200px;
 }
 
 
@@ -626,7 +646,7 @@ aside {
     content: "</h1>";
     position: absolute;
     bottom: -20px;
-    right: -80px;
+    right: 150px;
     font-size: 1.2rem;
     font-family: "La Belle Aurore", cursive;
     letter-spacing: 1px;
@@ -636,9 +656,13 @@ aside {
 
   .text-zone img {
     width: 150px;
+    position: relative;
+    bottom: 50px;
+    left: 20px;
   }
 
   .text-zone .gray-text {
+    padding-top: 1rem;
     font-size: 1rem;
   }
 
@@ -646,7 +670,7 @@ aside {
     content: "<p>";
     position: absolute;
     left: -20px;
-    top: -33px;
+    top: -10px;
     font-size: 1.2rem;
     font-family: "La Belle Aurore", cursive;
     letter-spacing: 1px;
@@ -666,13 +690,13 @@ aside {
     color: #666565;
   }
 
-  .scroll-down {
-    right: -30px;
-    bottom: 3.3rem;
+  .scroll-down-right {
+    right: 0;
+    left: auto;
   }
 
   .scroll-down-left {
-    left: 120px;
+    left: 140px;
     right: auto;
   }
 
@@ -704,7 +728,7 @@ aside {
   .fake-big-2 {
     font-size: 25rem;
     font-weight: 700;
-    left: 340px;
+    left: 315px;
     top: 0;
   }
 
