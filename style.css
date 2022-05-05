@@ -1,0 +1,774 @@
+body {
+  background: #1b1b1b;
+}
+
+header {
+  width: 95%;
+  height: 10vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  align-items: center;
+  z-index: 2;
+}
+
+#sound {
+  padding: 7px;
+  background: #1b1b1b;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  color: white;
+}
+
+.sound-icon {
+  font-size: 1.2rem;
+  margin: 7px;
+  color: #f50057;
+}
+.pointer {cursor: pointer;}
+
+#on-off {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+#off {
+  color: #f50057;
+}
+
+#on {
+  color: #08fdd8;
+  display: none;
+}
+
+.button-container {
+  font-size: 2rem;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button-container .fas:nth-child(2) {
+  display: none;
+}
+
+/* NOTE: aside section --------------------------- */
+aside {
+  width: 100%;
+  height: 0;
+  background-color: #191919;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.show-nav {
+  height: 100%;
+  overflow: visible;
+}
+
+.aside-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-section {
+  min-height: 32vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-color: black;
+}
+
+.logo {
+  text-decoration: none;
+  display: grid;
+  text-align: center;
+}
+
+.logo img {
+  width: 110px;
+  height: auto;
+  color: #f50057;
+}
+
+.logo span {
+  font-size: 1.7rem;
+  color: white;
+}
+
+.logo-section>span {
+  margin-top: 25px;
+  font-size: 12px;
+  font-family: 'Tinos', serif;
+}
+
+/* NOTE: nav section starts here */
+.nav-links a {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  text-decoration: none;
+  color: #908096;
+}
+
+.nav-links a:hover {
+  color: #08fdd8;
+}
+
+.nav-links a::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  background-color: #2d2d2e;
+}
+
+/* NOTE: social icons */
+.social-icons {
+  list-style: none;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.social-icons li {
+  width: 30px;
+  font-size: 1.5rem;
+}
+
+.social-icons li a {
+  text-decoration: none;
+  color: #909096;
+}
+
+.social-icons li a:hover {
+  color: #08fdd8;
+}
+
+/* NOTE: ------------------------- */
+.section-home {
+  min-height: 100vh;
+  padding: 12rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+  color: white;
+}
+
+.text-zone h1 {
+  line-height: 60px;
+  font-size: 3.2rem;
+}
+}
+
+.text-zone h1::before {
+  content: "<h1>";
+  position: absolute;
+  left: -80px;
+  top: -10px;
+  font-size: 1.2rem;
+  font-family: "La Belle Aurore", cursive;
+  letter-spacing: 1px;
+  font-style: italic;
+  color: #666565;
+}
+
+.text-zone h1::after {
+  content: "</h1>";
+  position: absolute;
+  bottom: -20px;
+  right: -80px;
+  font-size: 1.2rem;
+  font-family: "La Belle Aurore", cursive;
+  letter-spacing: 1px;
+  font-style: italic;
+  color: #666565;
+}
+
+.text-zone img {
+  width: 180px;
+  height: auto;
+  position: relative;
+  bottom: 40px;
+  left: 30px;
+}
+
+.text-zone .gray-text {
+  margin-top: 30px;
+  letter-spacing: 3px;
+  font-size: 14px;
+  position: relative;
+  color: #a2a2a3;
+}
+
+.text-zone .gray-text::before {
+  content: "<p>";
+  position: absolute;
+  left: -20px;
+  top: -33px;
+  font-size: 1.2rem;
+  font-family: "La Belle Aurore", cursive;
+  letter-spacing: 1px;
+  font-style: italic;
+  color: #666565;
+}
+
+.text-zone .gray-text::after {
+  content: "</p>";
+  position: absolute;
+  bottom: -33px;
+  left: -20px;
+  font-size: 1.2rem;
+  font-family: "La Belle Aurore", cursive;
+  letter-spacing: 1px;
+  font-style: italic;
+  color: #666565;
+}
+
+.contact-button {
+  margin-top: 50px 0 0;
+  width: 100%;
+  text-decoration: none;
+  max-width: 200px;
+  height: 40px;
+  display: block;
+  line-height: 40px;
+  letter-spacing: 3px;
+  color: #08fdd8;
+  text-align: center;
+}
+
+.contact-button div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: all .3s ease-in-out;
+}
+
+.contact-button span.bg {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  left: -5px;
+  top: 0;
+  transition: all .3s ease-in-out;
+  background-color: #08fdd8;
+  transform: skewX(-20deg);
+}
+
+.contact-button:hover span.bg {
+  width: 110%;
+}
+
+.contact-button span.base {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  border: 1px solid #08fdd8;
+  box-sizing: border-box;
+}
+
+.contact-button span.text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.contact-button:hover span.text {
+  color: #1d1d1d;
+}
+
+.scroll-down {
+  position: absolute;
+  right: 20px;
+  bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(90deg);
+  display: block;
+  font-size: 14px
+}
+
+.scroll-down-left {
+  left: -30px;
+  right: auto;
+}
+
+.scroll-down span {
+  display: inline-block;
+  animation: scroll .5s linear infinite alternate-reverse;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(-7px);
+  }
+
+  100% {
+    transform: translateX(7px);
+  }
+}
+
+/* NOTE: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+#section-work {
+  padding: 5rem 0 5rem 1.5rem;
+  position: relative;
+}
+
+
+.header h2 {
+  font-size: 5rem;
+  color: #08fdd8;
+  margin-top: 30px;
+}
+
+.contact-button {
+  margin-top: 50px 0 0;
+  width: 100%;
+  text-decoration: none;
+  max-width: 200px;
+  height: 40px;
+  display: block;
+  line-height: 40px;
+  letter-spacing: 3px;
+  color: #08fdd8;
+  text-align: center;
+}
+
+.contact-button div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: all .3s ease-in-out;
+}
+
+.contact-button span.bg {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  left: -5px;
+  top: 0;
+  transition: all .3s ease-in-out;
+  background-color: #08fdd8;
+  transform: skewX(-20deg);
+}
+
+.contact-button:hover span.bg {
+  width: 110%;
+}
+
+.contact-button span.base {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  border: 1px solid #08fdd8;
+  box-sizing: border-box;
+}
+
+.contact-button span.text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.contact-button:hover span.text {
+  color: #1d1d1d;
+}
+
+.text-zone-2 p {
+  color: white;
+  line-height: 1.5;
+}
+
+.fake-big-2 {
+  font-size: 12rem;
+  font-weight: 700;
+  position: absolute;
+  color: #2d2d2e;
+  left: 10px;
+  bottom: -70px;
+  letter-spacing: -10px;
+  z-index: -999;
+}
+
+.fake-magicwall {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.fake-magicwall ul {
+  list-style: none;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  flex-wrap: wrap;
+}
+
+.fake-magicwall ul li {
+  width: 161px;
+  height: 160px;
+  position: relative;
+  overflow: hidden;
+  display: list-item;
+}
+
+.fake-magicwall img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fake-magicwall .magic-wall-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: transform 0.5 opacity 0.5s;
+  transition: transform 0.5 opacity 0.5s;
+  -webkit-transform 0.5s;
+}
+
+.fake-magicwall ul li:hover .magic-wall-item {
+  transform: scale(1.14);
+  -ms-transform: scale(1.14);
+  -webkit0transform: scale(1.14);
+}
+
+.fake-magicwall ul li a.colorbox {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 150ms ease-out;
+  -o-transition: all 150ms ease-out;
+  -webkit-transition: all 150ms ease-out;
+  transform: scale(0.6);
+}
+
+.fake-magicwall ul li:hover a.colorbox {
+  transform: scale(0.6);
+  opacity: 1;
+}
+
+/* NOTE: Part-3 section starts here   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+#section-about {
+  margin-top: 100px;
+  padding: 5rem 0 5rem 1.5rem;
+  display: block;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.text-zone3 p {
+  color: white;
+  margin-bottom: 16px;
+  line-height: 1.5rem;
+}
+
+.tech {
+  text-decoration: none;
+  color: #08fdd8;
+}
+
+/* NOTE: blog section starts here @@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+.section-blog {
+  width: 85%;
+  margin: 100px auto 0;
+  position: relative;
+}
+
+.section-blog .fake-big-2 {
+  font-size: 12rem;
+  font-weight: bolder;
+  position: absolute;
+  top: -240px;
+  left: 0;
+}
+
+.blog-articles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.post-articles {
+  width: 100%;
+  height: 220px;
+  background-color: #1d1d1d;
+  padding: 25px;
+  color: #909096;
+  box-shadow: 0 0 5px 5px #191919;
+  margin-bottom: 30px;
+}
+
+.post-date {
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.blog-post-title h5 a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin: 15px 0;
+}
+
+.blog-post-title h5 a:hover {
+  color: #06b99e;
+}
+
+#section-contact {
+  margin-top: 100px;
+  padding: 5rem 0 5rem 1.5rem;
+  display: block;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+
+
+/* NOTE: media query part 2  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+@media screen and (min-width: 950px) {
+  header {
+    justify-content: flex-end;
+  }
+
+  .button-container {
+    display: none;
+  }
+
+  .aside {
+    width: 10%;
+    height: 100%;
+  }
+
+  .aside-wrapper {
+    height: 75%;
+  }
+
+  .logo-section {
+    height: 25vh;
+  }
+
+  .logo img {
+    width: 80px;
+    height: auto;
+  }
+
+  .social-icons {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+  .social-icons li {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  /* NOTE: Home section */
+  #section-home {
+    padding: 14rem;
+  }
+
+  .text-zone h1 {
+    font-size: 6.5rem;
+    line-height: 50px;
+    letter-spacing: -6px;
+    position: relative;
+  }
+
+  .text-zone h1::before {
+    content: "<h1>";
+    position: absolute;
+    top: -80px;
+    left: -10px;
+    font-size: 1.2rem;
+    font-family: "La Belle Aurore", cursive;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: #666565;
+  }
+
+  .text-zone h1::after {
+    content: "</h1>";
+    position: absolute;
+    bottom: -20px;
+    right: -80px;
+    font-size: 1.2rem;
+    font-family: "La Belle Aurore", cursive;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: #666565;
+  }
+
+  .text-zone img {
+    width: 150px;
+  }
+
+  .text-zone .gray-text {
+    font-size: 1rem;
+  }
+
+  .text-zone .gray-text::before {
+    content: "<p>";
+    position: absolute;
+    left: -20px;
+    top: -33px;
+    font-size: 1.2rem;
+    font-family: "La Belle Aurore", cursive;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: #666565;
+  }
+
+  .text-zone .gray-text::after {
+    content: "</p>";
+    position: absolute;
+    bottom: -33px;
+    left: -20px;
+    font-size: 1.2rem;
+    font-family: "La Belle Aurore", cursive;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: #666565;
+  }
+
+  .scroll-down {
+    right: -30px;
+    bottom: 3.3rem;
+  }
+
+  .scroll-down-left {
+    left: 120px;
+    right: auto;
+  }
+
+  #section-work {
+    width: 85%;
+    margin: 0 30px 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-zone-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header h2 {
+    font-size: 73px;
+    font-weight: 700;
+  }
+
+  .text-zone-2 p {
+    padding-top: 1rem;
+    line-height: 1.5rem;
+    font-size: 16px;
+    width: 700px;
+  }
+
+  .fake-big-2 {
+    font-size: 25rem;
+    font-weight: 700;
+    left: 340px;
+    top: 0;
+  }
+
+  .fake-magicwall {
+    padding-left: 8.5rem;
+  }
+
+  .fake-magicwall ul li {
+    width: 270px;
+    height: 260px;
+  }
+
+  /* NOTE: media query for about section */
+  #section-about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 13rem;
+  }
+
+  text-zone3 #header {
+    width: 500px;
+    font-size: 3rem;
+  }
+
+  .text-zone3 p {
+    width: 90%;
+  }
+
+  .skill-charts {
+    margin-right: 20%;
+  }
+
+  #myCanvas {
+    padding-right: 200px;
+  }
+
+  /* NOTE: media query for blog section */
+  .section-blog {
+    width: 90%;
+    margin: 100px auto 0;
+  }
+
+  .section-blog .fake-big-2 {
+    font-size: 25rem;
+    font-weight: 700;
+    left: 340px;
+    top: -400px;
+  }
+
+  .blog-articles {
+    width: 90%;
+    margin: 0 0 0 auto;
+    flex-flow: row wrap;
+  }
+
+  .post-articles {
+    width: 340px;
+    height: 270px;
+  }
+  #section-contact {
+    width: 85%;
+    margin: 0 30px 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
