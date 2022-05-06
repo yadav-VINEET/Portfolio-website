@@ -180,6 +180,7 @@ aside {
 
 
 .text-zone h1::before {
+  opacity: 0.4;
   content: "<h1>";
   position: absolute;
   top: -40px;
@@ -191,6 +192,7 @@ aside {
 }
 
 .text-zone h1::after {
+  opacity: 0.4;
   content: "</h1>";
   position: relative;
   right: px;
@@ -211,6 +213,7 @@ aside {
 
 .text-zone .gray-text {
   margin-top: 30px;
+  margin-bottom: 50px;
   letter-spacing: 3px;
   font-size: 14px;
   position: relative;
@@ -242,7 +245,7 @@ aside {
 }
 
 .contact-button {
-  margin-top: 50px 0 0;
+  margin-top: 100px 0 0;
   width: 100%;
   text-decoration: none;
   max-width: 200px;
@@ -432,6 +435,7 @@ aside {
 }
 
 .fake-magicwall ul {
+  padding: 0;
   list-style: none;
   display: flex;
   display: -ms-flexbox;
@@ -440,8 +444,9 @@ aside {
 }
 
 .fake-magicwall ul li {
-  width: 161px;
-  height: 160px;
+  width: 180px;
+  height: auto;
+  height: 180px;
   position: relative;
   overflow: hidden;
   display: list-item;
@@ -473,15 +478,20 @@ aside {
 .fake-magicwall ul li a.colorbox {
   display: block;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  opacity: 0.4;
+  top: 55px;
+  left: 55px;
+  width: 60%;
+  height: 60%;
   opacity: 0;
   transition: all 150ms ease-out;
   -o-transition: all 150ms ease-out;
   -webkit-transition: all 150ms ease-out;
   transform: scale(0.6);
+}
+.fake-magicwall ul li a img{
+  opacity: 0.7;
+
 }
 
 .fake-magicwall ul li:hover a.colorbox {
@@ -492,11 +502,15 @@ aside {
 /* NOTE: Part-3 section starts here   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 #section-about {
   margin-top: 100px;
-  padding: 5rem 0 5rem 1.5rem;
+  padding: 5rem 0 5rem 0;
   display: block;
   flex-direction: row;
   justify-content: space-between;
   position: relative;
+}
+.text-zone3{
+  padding-left: 1.5rem ;
+  padding-right: 0.7rem;
 }
 
 .text-zone3 p {
@@ -537,7 +551,7 @@ aside {
 
 .post-articles {
   width: 100%;
-  height: 220px;
+  height: 240px;
   background-color: #1d1d1d;
   padding: 25px;
   color: #909096;
@@ -620,7 +634,7 @@ aside {
 
   /* NOTE: Home section */
   #section-home {
-    padding: 14rem;
+    padding: 8rem 14rem 5rem;
   }
 
   .text-zone h1 {
@@ -631,6 +645,7 @@ aside {
   }
 
   .text-zone h1::before {
+    opacity: 0.4;
     content: "<h1>";
     position: absolute;
     top: -80px;
@@ -643,10 +658,11 @@ aside {
   }
 
   .text-zone h1::after {
+    opacity: 0.4;
     content: "</h1>";
     position: absolute;
     bottom: -20px;
-    right: 150px;
+    /* right: 10px; */
     font-size: 1.2rem;
     font-family: "La Belle Aurore", cursive;
     letter-spacing: 1px;
@@ -747,9 +763,13 @@ aside {
     flex-direction: row;
     justify-content: space-between;
     padding-left: 13rem;
+    padding-top: 0;
   }
-
-  text-zone3 #header {
+.text-zone3{
+  padding-top: 100px;
+  width: 580px;
+}
+  .text-zone3 #header {
     width: 500px;
     font-size: 3rem;
   }
@@ -759,11 +779,13 @@ aside {
   }
 
   .skill-charts {
-    margin-right: 20%;
+    /* margin-right: 20%; */
   }
 
   #myCanvas {
-    padding-right: 200px;
+    padding-right: 100px;
+    width: 700px;
+    height: 700px;
   }
 
   /* NOTE: media query for blog section */
