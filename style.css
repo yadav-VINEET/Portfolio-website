@@ -432,6 +432,7 @@ aside {
 
 .fake-magicwall {
   background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 250px;
 }
 
 .fake-magicwall ul {
@@ -530,7 +531,7 @@ aside {
 /* NOTE: blog section starts here @@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 .section-blog {
   width: 85%;
-  margin: 100px auto 0;
+  margin: 300px auto 0;
   position: relative;
 }
 
