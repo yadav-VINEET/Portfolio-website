@@ -99,7 +99,7 @@ aside {
 }
 
 .logo img {
-  width: 110px;
+  width: 16vh;
   height: auto;
   color: #f50057;
 }
@@ -311,7 +311,7 @@ aside {
   align-items: center;
   justify-content: center;
   transform: rotate(90deg);
-  display: block;
+  /* display: block; */
   font-size: 14px
 }
 .scroll-down-right {
@@ -439,8 +439,6 @@ aside {
   padding: 0;
   list-style: none;
   display: flex;
-  display: -ms-flexbox;
-  display: -webkit-box;
   flex-wrap: wrap;
 }
 
@@ -486,13 +484,10 @@ aside {
   height: 60%;
   opacity: 0;
   transition: all 150ms ease-out;
-  -o-transition: all 150ms ease-out;
-  -webkit-transition: all 150ms ease-out;
   transform: scale(0.6);
 }
 .fake-magicwall ul li a img{
   opacity: 0.7;
-
 }
 
 .fake-magicwall ul li:hover a.colorbox {
@@ -529,6 +524,7 @@ aside {
 }
 
 /* NOTE: blog section starts here @@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
 .section-blog {
   width: 85%;
   margin: 300px auto 0;
@@ -542,17 +538,36 @@ aside {
   top: -220px;
   left: 0;
 }
-
 .blog-articles {
   display: flex;
+  margin: auto;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
+.article-photo-div{
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  overflow: hidden;
+  
+}
+.article-photo{
+  /* position: absolute; */
+  left: 100%;
+  right: 100%;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  /* background-size: cover; */
+  object-fit: cover;
+  justify-content: center;
+  
+}
 
 .post-articles {
-  width: 100%;
-  height: 240px;
+  width: 70%;
+  /* height: 240px; */
   background-color: #1d1d1d;
   padding: 25px;
   color: #909096;
@@ -614,6 +629,8 @@ aside {
 
 
 /* NOTE: media query part 2  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
 @media screen and (min-width: 950px) {
   header {
     justify-content: flex-end;
@@ -822,13 +839,34 @@ aside {
 
   .blog-articles {
     width: 90%;
+    display: flex;
     margin: 0 0 0 auto;
     flex-flow: row wrap;
   }
 
   .post-articles {
-    width: 340px;
-    height: 270px;
+    position: relative;
+    width: 28%;
+    height: 30rem;
+  }
+  .article-photo-div{
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    overflow: hidden;
+    
+  }
+  .article-photo{
+    /* position: absolute; */
+    left: 100%;
+    right: 100%;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    /* background-size: cover; */
+    object-fit: cover;
+    justify-content: center;
+    
   }
   #section-contact {
     width: 85%;
